@@ -16,7 +16,7 @@ public class UserDAO {
 	public User getUser(String username, String password) throws ClassNotFoundException, SQLException {
 		if (conn == null)
 			conn = ConnectDatabase.getMySQLConnection();
-		String sql = "Select * from User where username=? and password=?";
+		String sql = "Select * from User where username=? and password=?"; 
 
 		PreparedStatement pstm = (PreparedStatement) conn.prepareStatement(sql);
 		pstm.setString(1, username);
